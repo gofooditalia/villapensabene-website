@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { restaurantData } from "@/lib/restaurant-data";
 import SocialLinks from "@/components/SocialLinks";
 
@@ -6,32 +7,40 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center bg-gradient-to-b from-zinc-900 to-zinc-800 text-white">
+      <section className="relative h-[600px] flex items-center justify-center text-white overflow-hidden">
+        <Image
+          src="/villa aria di feste.svg"
+          alt="Villa Pensabene"
+          fill
+          className="object-cover"
+          priority
+        />
         <div className="absolute inset-0 bg-black/40"></div>
-        <div className="relative z-10 text-center px-4 max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
-            {restaurantData.name}
-          </h1>
-          <p className="text-xl md:text-2xl mb-6 text-zinc-200">
-            {restaurantData.tagline}
-          </p>
-          <p className="text-lg mb-8 text-zinc-300 max-w-2xl mx-auto">
-            {restaurantData.description}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/menu"
-              className="px-8 py-3 bg-white text-zinc-900 rounded-full font-semibold hover:bg-zinc-100 transition-colors"
-            >
-              Vedi il Menu
-            </Link>
-            <Link
-              href="/contact"
-              className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white/10 transition-colors"
-            >
-              Prenota un Tavolo
-            </Link>
-          </div>
+        {/* Logo sovrapposto nella parte superiore */}
+        <div className="absolute -top-24 left-1/2 transform -translate-x-1/2 z-20 w-full max-w-md px-4">
+          <Image
+            src="/villa-pensabene-logo.svg"
+            alt="Villa Pensabene Logo"
+            width={600}
+            height={300}
+            className="w-full h-auto mx-auto"
+            priority
+          />
+        </div>
+        {/* Pulsanti */}
+        <div className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center mt-auto mb-20">
+          <Link
+            href="/menu"
+            className="px-8 py-3 bg-white text-zinc-900 rounded-full font-semibold hover:bg-zinc-100 transition-colors"
+          >
+            Vedi il Menu
+          </Link>
+          <Link
+            href="/contact"
+            className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white/10 transition-colors"
+          >
+            Prenota un Tavolo
+          </Link>
         </div>
       </section>
 

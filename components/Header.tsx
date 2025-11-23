@@ -21,18 +21,15 @@ export default function Header() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="flex w-full items-center justify-between py-4">
           <div className="flex items-center gap-3">
-            <Link href="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center">
               <Image
-                src="/logo.ico"
-                alt={`${restaurantData.name} Logo`}
-                width={40}
-                height={40}
-                className="w-10 h-10 object-contain"
+                src="/villa-pensabene-logo.svg"
+                alt="Villa Pensabene Logo"
+                width={200}
+                height={100}
+                className="h-12 w-auto"
                 priority
               />
-              <span className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">
-                {restaurantData.name}
-              </span>
             </Link>
           </div>
           <div className="hidden md:flex md:items-center md:space-x-8">
