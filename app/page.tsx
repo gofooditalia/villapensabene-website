@@ -125,6 +125,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-20 px-4 bg-zinc-50 dark:bg-zinc-900">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8 text-zinc-900 dark:text-zinc-100">
+            Guarda il Nostro Video
+          </h2>
+          <div className="flex justify-center">
+            <div className="w-full max-w-2xl">
+              <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                <iframe
+                  src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fvillapensabeneristorante%2Fvideos%2F1494511238522640%2F%3Fidorvanity%3D1772080463424717&show_text=false&width=560&t=0"
+                  width="560"
+                  height="314"
+                  style={{ border: "none", overflow: "hidden" }}
+                  scrolling="no"
+                  frameBorder="0"
+                  allowFullScreen={true}
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  className="absolute top-0 left-0 w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Social Section */}
       <section className="py-20 px-4 bg-white dark:bg-black">
         <div className="max-w-4xl mx-auto text-center">
