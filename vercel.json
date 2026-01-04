@@ -1,0 +1,11 @@
+{
+  "functions": {
+    "app/**/*.ts": {
+      "runtime": "bun@latest"
+    },
+    "app/**/*.tsx": {
+      "runtime": "bun@latest"
+    }
+  }
+}
+
