@@ -1,11 +1,5 @@
 {
-  "functions": {
-    "app/**/*.ts": {
-      "runtime": "bun@latest"
-    },
-    "app/**/*.tsx": {
-      "runtime": "bun@latest"
-    }
-  }
+  "buildCommand": "bun run build",
+  "installCommand": "bun install"
 }
 
